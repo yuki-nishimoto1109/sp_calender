@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row">
+    <h1>月間予定表</h1>
+  </div>
+  <div class="row">
+    <div class="col-12 col-sm-10 mx-auto">
+      <%= month_calendar do |date| %>
+        <%= date.day %>
+        <% lists = @plans.filter{|plan| plan.date == date.day} if @plans.present? %>
+        <ul class="list-group list-group-flush">
+          <% lists.each do |plan| %>
+            <%= link_to edit_plan_path(plan.id), style: "text-decoration: none;" do %>
+              <li class="list-group-item" style="background-color: transparent;"><%= plan.title %></li>
+            <% end %>
+          <% end %>
+        </ul>
+      <% end %>
+    </div>
+  </div>
+</div>

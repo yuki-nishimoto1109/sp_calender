@@ -11,6 +11,7 @@ import "channels"
 import "jquery";
 import "popper.js";
 import "bootstrap";
+import "chartkick/chart.js";
 import "../stylesheets/application";
 
 Rails.start()

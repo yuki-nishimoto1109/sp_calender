@@ -1,6 +1,20 @@
-<h1>Homes#top</h1>
-<p>Find me in app/views/homes/top.html.erb</p>
-
-<%= month_calendar do |date| %>
-  <%= date %>
-<% end %>
+<div class="container">
+  <div class="row">
+    <div class="mx-auto mt-3 col-11 col-sm-10 col-lg-8 col-xl-6">
+      <h1>
+        welcome to <strong>SpCalender</strong> !!
+      </h1>
+      <p>In <strong>SpCalender</strong>,</p>
+      <p>you can record Anniversary date and manage it.</p>
+      <p>And you can do good communication!</p>
+      <div class="btn-wrapper col-10 mx-auto">
+        <div class="row">
+          <%= link_to "Log in", new_user_session_path, class: 'btn btn-secondary mt-3' %>
+        </div>
+        <div class="row">
+          <%= link_to "Sign up", new_user_registration_path, class: 'btn btn-light mt-3' %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

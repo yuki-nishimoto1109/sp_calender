@@ -1,0 +1,32 @@
+<div class="container">
+
+  <div class="row my-3">
+    <h1>記念日の編集</h1>
+  </div>
+
+  <%= render 'layouts/errors', obj: @plan %>
+
+  <%= form_with model: @plan do |f| %>
+    <div class="row">
+      <div class="col-3 col-sm-2 col-lg-1">
+        <%= f.label :month %>
+        <%= f.select :month, [*1..12],{},{class: 'form-select'} %>
+      </div>
+      <div class="col-3 col-sm-2 col-lg-1">
+        <%= f.label :date %>
+        <%= f.select :date,  [*1..31],{},{class: 'form-select'} %>
+      </div>
+      <div class="col-12">
+        <%= f.label :title %>
+        <%= f.text_field :title, class: 'form-control' %>
+      </div>
+      <div class="col-12">
+        <%= f.label :body %>
+        <%= f.text_area :body, class: 'form-control' %>
+      </div>
+      <div class="form-group mt-3 mx-auto text-center">
+        <%= f.submit "編集", class: 'btn btn-success w-75' %>
+      </div>
+    </div>
+  <% end %>
+</div>
