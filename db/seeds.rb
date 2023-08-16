@@ -15,17 +15,20 @@ User.create!(
 
 
 users = [
-          ["Aさん",   10,  5],
-          ["Bさん",    8, 30],
-          ["Cのすけ", 12, 31],
-          ["D氏",      1,  5]
+          ["Aさんの誕生日",   10,  5],
+          ["Bさんの誕生日",    8, 30],
+          ["Cのすけの誕生日", 12, 31],
+          ["D氏の誕生日",      1,  5],
+          ["結婚記念日",       8, 16],
+          ["創立記念日",       9, 20],
+          ["開店記念日",       8, 30]
         ]
 
 puts "--------- create plan"
 users.each do |user|
   Plan.create!(
     user_id: 1,
-    title: user[0] + "の誕生日",
+    title: user[0],
      body: user[0],
     month: user[1],
      date: user[2]

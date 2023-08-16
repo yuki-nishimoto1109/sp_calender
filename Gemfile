@@ -60,4 +60,3 @@ gem 'bootstrap', '~> 5.3.1'
 gem 'jquery-rails'
 gem "simple_calendar", "~> 2.4"
 gem 'rails-i18n'
-gem "chartkick"
